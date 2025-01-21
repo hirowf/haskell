@@ -1,6 +1,6 @@
 let arr = [1, 2, 'a', 5]
 
-// console.log(arr[2])
+console.log(arr[2])
 
 const a = new ArrayBuffer(8)
 const a8 = new Uint8Array(a)
