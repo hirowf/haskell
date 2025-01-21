@@ -26,3 +26,21 @@ inv_list l = inv_aux l []
 fn_inv_list :: [t] -> [t]
 fn_inv_list [] = []
 fn_inv_list (x : xs) = fn_inv_list xs ++ [x]
+
+pertence :: [Int] -> Int -> Bool
+pertence [] _ = False
+pertence (x : xs) n
+  | x == n = True
+  | otherwise = pertence xs n
+
+greater :: [Int] -> Int
+greater [x] = x
+greater (x : xs)
+  | x > greater xs = x
+  | otherwise = greater xs
+
+pairs :: [Int] -> Bool
+pairs [] = True
+pairs (x : xs)
+  | mod x 2 == 1 = False
+  | otherwise = pairs xs
